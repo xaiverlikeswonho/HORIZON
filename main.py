@@ -2,11 +2,13 @@ import logging
 import discord
 from discord.ext import commands
 from dotenv import load_dotenv
+
+load_dotenv()
+
 from horizon.config import settings
 from horizon.database import init_db
 from horizon.services.guild_settings import get_prefix
 
-load_dotenv()
 logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)s | %(name)s | %(message)s")
 log = logging.getLogger("horizon")
 
