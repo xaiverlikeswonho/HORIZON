@@ -25,7 +25,7 @@ bot = commands.Bot(command_prefix=dynamic_prefix, intents=intents, help_command=
 
 @bot.event
 async def setup_hook():
-    await init_db()
+    init_db()
     await bot.load_extension("horizon.cogs.core")
     await bot.load_extension("horizon.cogs.server")
     await bot.tree.sync()
